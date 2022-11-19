@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-web-guide
+  webflux:
+    base-path: /api
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: mongodb://localhost:27017/test
+      database: test

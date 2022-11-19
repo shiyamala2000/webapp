@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index page</h1>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="cnt">
+    <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="getItems()">Change Content</button>
+    </div>
+    <script>
+        const uri = "https://jsonplaceholder.typicode.com/posts";
+        let posts = [];
+        let updateIndex = 0;
+        function getItems() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    posts=JSON.parse(xhttp.responseText);
+                    document.getElementById("cnt").innerHTML =posts.length
+                    document.getElementById("demo").innerHTML =(posts)  
+                    // JSON.stringify
+                }
+            };
+            xhttp.open("GET", uri, true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

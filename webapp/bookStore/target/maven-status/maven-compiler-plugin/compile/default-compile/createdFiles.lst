@@ -1,0 +1,6 @@
+com\kgisl\book\Controller\BookController.class
+com\kgisl\book\entity\Product.class
+com\kgisl\book\Controller\ProductController.class
+AdminServlet.class
+MyFilter.class
+com\kgisl\book\entity\Book.class
